@@ -1,0 +1,36 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Web",
+            "port": 9222,
+            "request": "attach",
+            "type": "msedge",
+            "urlFilter": "http://localhost:5173/*", // use urlFilter instead of url!
+            "webRoot": "${workspaceFolder}/web",
+            "preLaunchTask": "npm: dev - web"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug API",
+            "skipFiles": [
+                "<node_internals>/**",
+                "${workspaceRoot}/api/node_modules/**"
+            ],
+            "runtimeExecutable": "${workspaceRoot}/api/node_modules/.bin/ts-node-dev",
+            "runtimeArgs": [
+                "--transpile-only",
+                // if you use esm
+                // "--esm" 
+            ],
+            "program": "${workspaceFolder}/api/src/server.ts",
+            "cwd": "${workspaceRoot}/api",
+            "internalConsoleOptions": "openOnSessionStart",
+            "console": "integratedTerminal"
+        }
+    ]
+}
