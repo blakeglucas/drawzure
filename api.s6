@@ -1,0 +1,4 @@
+#!/command/with-contenv bash
+
+cd /opt/app/api
+node ./node_modules/ts-node/dist/bin.js -r tsconfig-paths/register ./src/server.ts
