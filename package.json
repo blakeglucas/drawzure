@@ -1,8 +1,7 @@
 {
-  "name": "ui",
+  "name": "drawzure",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "debug": "cross-env BROWSER='msedge' BROWSER_ARGS='--remote-debugging-port=9222' vite",
@@ -11,8 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@deepkit/type": "^1.0.1-alpha.153",
+    "azure-react-icons": "^0.10.1",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "reflect-metadata": "^0.2.2"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
@@ -24,6 +26,10 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "tslib": "^2.6.3",
     "typescript": "^5.2.2",
     "vite": "^5.3.1"
   }

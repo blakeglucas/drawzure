@@ -6,8 +6,13 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "strict": true,
-    "noEmit": true
+    "noEmit": true,
+    "paths": {
+      "$common/*": ["./common/*"]
+    }
   },
   "include": ["vite.config.ts"]
 }

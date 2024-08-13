@@ -1,20 +1,25 @@
-import fastify from 'fastify';
-import fastifySocketIO from 'fastify-socket.io';
+// import fastify from 'fastify';
+// import fastifySocketIO from 'fastify-socket.io';
 
-const PORT = Number(process.env.PORT || '9090');
+// const PORT = Number(process.env.PORT || '9090');
 
-const app = fastify({ logger: true });
-app.register(fastifySocketIO);
+// const app = fastify({ logger: true });
+// app.register(fastifySocketIO);
 
-app.ready((err) => {
-  if (err) {
-    app.log.error(err);
-    process.exit(1);
-  }
-  // @ts-ignore
-  app.io.on('connection', () => {
-    /* … */
-  });
-});
+// app.ready((err) => {
+//   if (err) {
+//     app.log.error(err);
+//     process.exit(1);
+//   }
+//   // @ts-ignore
+//   app.io.on('connection', () => {
+//     /* … */
+//   });
+// });
 
-app.listen({ port: PORT });
+// app.listen({ port: PORT });
+import 'reflect-metadata';
+
+import { appService } from '$common/azure/AppService.model';
+
+console.log(appService);
